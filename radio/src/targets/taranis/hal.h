@@ -1404,20 +1404,24 @@
 #endif
 
 // ADC
-#if !defined(RADIO_FAMILY_T20) && !defined(RADIO_BUMBLEBEE)
+#if defined(RADIO_H5TEST)
   #define ADC_MAIN                      ADC1
-  //#define ADC_DMA                       DMA2
+  #define ADC_DMA                       GPDMA2
+  #define ADC_DMA_CHANNEL               LL_GPDMA2_REQUEST_ADC1
+  #define ADC_DMA_STREAM                LL_DMA_CHANNEL_3
+  #define ADC_DMA_STREAM_IRQ            GPDMA2_Channel3_IRQn
+  #define ADC_DMA_STREAM_IRQHandler     GPDMA2_Channel3_IRQHandler
+  #define ADC_SAMPTIME                  LL_ADC_SAMPLINGTIME_92CYCLES_5
+#elif !defined(RADIO_FAMILY_T20) && !defined(RADIO_BUMBLEBEE)
+  #define ADC_MAIN                      ADC1
+  #define ADC_DMA                       DMA2
   #define ADC_DMA_CHANNEL               LL_DMA_CHANNEL_0
   #define ADC_DMA_STREAM                LL_DMA_STREAM_4
   #define ADC_DMA_STREAM_IRQ            DMA2_Stream4_IRQn
   #define ADC_DMA_STREAM_IRQHandler     DMA2_Stream4_IRQHandler
+  #define ADC_SAMPTIME                  LL_ADC_SAMPLINGTIME_28CYCLES
 #endif
 
-#if defined(RADIO_H5TEST)
-#define ADC_SAMPTIME                    LL_ADC_SAMPLINGTIME_24CYCLES_5
-#else
-#define ADC_SAMPTIME                    LL_ADC_SAMPLINGTIME_28CYCLES
-#endif
 #define ADC_CHANNEL_RTC_BAT             LL_ADC_CHANNEL_VBAT
 
 #if defined(PCBX9E)
