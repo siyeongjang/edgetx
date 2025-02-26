@@ -19,6 +19,32 @@
  * GNU General Public License for more details.
  */
 
+#if defined(RADIO_H5TEST)
+/*
+DMA
+
+GPDMA1
+Channel0:
+Channel1:	INTMODULE_DMA_STREAM
+Channel2:	INTMODULE_RX_DMA_STREAM
+Channel3:	ADC_DMA_STREAM
+Channel4:
+Channel5:	AUDIO_DMA_Stream
+Channel6:	TELEMETRY_DMA_Stream_TX
+Channel7:
+
+GPDMA2
+Channel0:
+Channel1:	EXTMODULE_USART_TX_DMA_STREAM
+Channel2:	EXTMODULE_USART_RX_DMA_CHANNEL/EXTMODULE_TIMER_DMA_STREAM
+Channel3:
+Channel4:
+Channel5:	AUX_SERIAL_DMA_RX_STREAM
+Channel6:
+Channel7:
+ */
+#endif
+
 #pragma once
 
 #if defined(STM32F413xx)
@@ -2331,6 +2357,7 @@
   #define EXTMODULE_USART_TX_DMA             GPDMA2
   #define EXTMODULE_USART_TX_DMA_CHANNEL     LL_GPDMA2_REQUEST_USART1_TX
   #define EXTMODULE_USART_TX_DMA_STREAM      LL_DMA_CHANNEL_1
+  #define EXTMODULE_USART_RX_DMA             GPDMA2
   #define EXTMODULE_USART_RX_DMA_CHANNEL     LL_GPDMA2_REQUEST_USART1_RX
   #define EXTMODULE_USART_RX_DMA_STREAM      LL_DMA_CHANNEL_2
   #define EXTMODULE_USART_IRQHandler         USART1_IRQHandler
