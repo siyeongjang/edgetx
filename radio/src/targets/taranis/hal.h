@@ -1838,7 +1838,7 @@ Channel7:
   #define ADC_GPIO_PIN_STICK_RH         LL_GPIO_PIN_0  // PA.00
   #define ADC_GPIO_PIN_STICK_LV         LL_GPIO_PIN_2  // PC.02
   #define ADC_GPIO_PIN_STICK_LH         LL_GPIO_PIN_3  // PC.03
-  #define ADC_GPIO_PIN_BATT             LL_GPIO_PIN_0  // PA.02
+  #define ADC_GPIO_PIN_BATT             LL_GPIO_PIN_2  // PA.02
   #define ADC_CHANNEL_STICK_RV          LL_ADC_CHANNEL_1  // ADC12_INP1
   #define ADC_CHANNEL_STICK_RH          LL_ADC_CHANNEL_0  // ADC12_INP0
   #define ADC_CHANNEL_STICK_LV          LL_ADC_CHANNEL_12 // ADC12_INP12
@@ -1962,7 +1962,7 @@ Channel7:
 #elif defined(RADIO_V12)
   #define ADC_DIRECTION {1,-1,1,-1, -1,-1,1, 0, 1,1,1,1 }
 #elif defined(RADIO_H5TEST)
-  #define ADC_DIRECTION {-1,1,-1,1,  1,1}
+  #define ADC_DIRECTION {-1,-1,-1,-1,  1,1}
 #elif defined(PCBX7)
   #define ADC_DIRECTION {-1,1,-1,1,  1,1,  1,  1}
 #elif defined(PCBX9LITE)
