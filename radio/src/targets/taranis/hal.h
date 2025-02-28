@@ -1962,7 +1962,7 @@ Channel7:
 #elif defined(RADIO_V12)
   #define ADC_DIRECTION {1,-1,1,-1, -1,-1,1, 0, 1,1,1,1 }
 #elif defined(RADIO_H5TEST)
-  #define ADC_DIRECTION {-1,-1,-1,-1,  1,1}
+  #define ADC_DIRECTION {-1,-1,1,1,  1,1}
 #elif defined(PCBX7)
   #define ADC_DIRECTION {-1,1,-1,1,  1,1,  1,  1}
 #elif defined(PCBX9LITE)
