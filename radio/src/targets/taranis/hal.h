@@ -2469,13 +2469,13 @@ Channel7:
   #define TRAINER_DETECT_GPIO           GPIO_PIN(GPIOE, 15) // PE.15
   #define TRAINER_IN_GPIO               GPIO_PIN(GPIOE, 13)  // PE.13 TIM1_CH3
   #define TRAINER_IN_TIMER_Channel      LL_TIM_CHANNEL_CH3
-  #define TRAINER_OUT_GPIO              GPIO_PIN(GPIOD, 14) // PD.12 TIM1_CH4
+  #define TRAINER_OUT_GPIO              GPIO_PIN(GPIOE, 14) // PE.14 TIM1_CH4
   #define TRAINER_OUT_TIMER_Channel     LL_TIM_CHANNEL_CH4
   #define TRAINER_GPIO_AF               LL_GPIO_AF_1
   #define TRAINER_TIMER                 TIM1
-#define TRAINER_TIMER_IRQn            TIM15_IRQn
-//#define TRAINER_TIMER_IRQHandler      TIM1_IRQHandler
-#define TRAINER_TIMER_FREQ            (PERI1_FREQUENCY * TIMER_MULT_APB1)
+  #define TRAINER_TIMER_IRQn            TIM1_UP_IRQn
+  #define TRAINER_TIMER_IRQHandler      TIM1_UP_IRQHandler
+  #define TRAINER_TIMER_FREQ            (PERI1_FREQUENCY * TIMER_MULT_APB1)
 #else
   #define TRAINER_IN_GPIO               GPIO_PIN(GPIOC, 8) // PC.08
   #define TRAINER_IN_TIMER_Channel      LL_TIM_CHANNEL_CH3
