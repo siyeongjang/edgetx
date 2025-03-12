@@ -37,7 +37,7 @@ jobs:
           - mt12
           - nb4p
     container:
-      image: ghcr.io/edgetx/edgetx-dev:pr-24
+      image: ghcr.io/edgetx/edgetx-dev:latest
       volumes:
         - ${{ github.workspace }}:/src
     steps:
